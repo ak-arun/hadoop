@@ -33,8 +33,8 @@ public static void main(String[] args) throws Exception{
 	job.setReducerClass(ORCReducer.class);
 	job.setOutputKeyClass(NullWritable.class);
 	job.setOutputValueClass(Writable.class);
-	FileInputFormat.addInputPath(job, new Path("/Users/akeezhadath/Desktop/Personal/Learn/dummy/ORCMR/input"));
-	FileOutputFormat.setOutputPath(job, new Path("/Users/akeezhadath/Desktop/Personal/Learn/dummy/NewORCMR/op"+System.currentTimeMillis()));
+	FileInputFormat.addInputPath(job, new Path("in"));
+	FileOutputFormat.setOutputPath(job, new Path("out"+System.currentTimeMillis()));
 
   boolean completion= job.waitForCompletion(true) ;
   System.out.println(completion);
